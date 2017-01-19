@@ -1,13 +1,13 @@
 (function() {
   'use strict'
 
-  angular.module('app')
-    .config(config)
+  angular.module('app') //references module
+    .config(pickles)
 
-  config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider']
+  pickles.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider']
 
-  function config($stateProvider, $urlRouterProvider, $locationProvider){
-    $locationProvider.html5Mode(true)
+  function pickles($stateProvider, $urlRouterProvider, $locationProvider){
+    $locationProvider.html5Mode(true) //clean URLs no #. Need for base '/' state
 
     $stateProvider
       .state({
